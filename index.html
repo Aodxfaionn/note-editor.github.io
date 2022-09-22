@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Редактор заметок</title>
+</head>
+
+<body>
+    <main class="main-page">
+    <div class="sticker"></div>
+    <section class="editor">
+        <h2 class="editor-title">Редактор заметок</h2>
+        <div class="editor-toolbar">
+        <ul class="toolbar js-buttons-container">
+            <li>
+                <button type="button" data-setting="bold" class="toolbar-button toolbar-button-bold bold">B</button>
+            </li>
+            <li>
+                <button type="button" data-setting="italic" class="toolbar-button toolbar-button-italic italic">I</button>
+            </li>
+            <li>
+                <button type="button" data-setting="underline"
+                    class="toolbar-button toolbar-button-underline underline">U</button>
+            </li>
+            <li>
+                <button type="button" data-setting="strikethrough" class="toolbar-button toolbar-button-strikethrough strikethrough">ab</button>
+              </li>
+        </ul>
+        <select class="toolbar-button-align">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </select>
+        <select class="toolbar-button-size">
+            <option value="8px">8px</option>
+            <option value="10px">10px</option>
+            <option value="12px" selected>12px</option>
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+          </select>
+          <select class="toolbar-button-color">
+            <option value="black">Черный</option>
+            <option value="red">Красный</option>
+            <option value="blue">Синий</option>
+            <option value="green">Зеленый</option>
+            <option value="yellow">Желтый</option>
+          </select>
+        </div>
+        <textarea class="text"></textarea>
+        <button class="ready-button">Готово</button>
+    </section>
+</main>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
