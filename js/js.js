@@ -6,10 +6,6 @@ const text = document.querySelector(".text");
 const readyBtn = document.querySelector(".ready-button");
 const sticker = document.querySelector(".sticker");
 
-
-let selectText = getSelection().toString();
-
-
 const toolbarButtonClick = (evt) => {
   const button = evt.target.closest("button");
 
@@ -38,16 +34,12 @@ const colorButtonClick = () => {
 };
 
 const readyButtonClick = () => {
-/*   let readySticker = document.createElement("div");
-  readySticker.classList.add('readySticker')
-  readySticker.textContent = text.value;
-  sticker.appendChild(readySticker); */
-
-let test = text.cloneNode()
-test.classList.remove('text')
-test.classList.toggle('readySticker')
-sticker.appendChild(test); 
-}
+  let textSticker = text.cloneNode();
+  textSticker.classList.remove("text");
+  textSticker.classList.toggle("readySticker");
+  textSticker.setAttribute("readonly", "true");
+  sticker.appendChild(textSticker);
+};
 
 toolbar.addEventListener("click", toolbarButtonClick);
 sizeBtn.addEventListener("change", sizeButtonClick);
